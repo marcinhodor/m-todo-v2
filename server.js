@@ -131,27 +131,6 @@ app.delete('/categories/:id', (req, res) => {
   })
 })
 
-// modify a todo
-app.patch('/todos/:id', (req, res) => {
-  var id = req.params.id;
-  var completed = !req.body.isCompleted
-
-  Todo.findOneAndUpdate({
-      _id: id
-    }, {
-      $set: {
-        isCompleted: completed
-      }
-    }, {
-      new: true
-    })
-    .then((todo) => {
-      // console.log(todo)
-    }).catch((e) => {
-      // console.log(e)
-    });
-});
-
 setInterval(function () {
   http.get("http://m-todo-v2.herokuapp.com", (res) => {
     // console.log('ping')
