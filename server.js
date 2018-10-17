@@ -154,7 +154,7 @@ app.patch('/todos/:id', (req, res) => {
 
 setInterval(function () {
   http.get("http://m-todo-v2.herokuapp.com", (res) => {
-    console.log('ping')
+    // console.log('ping')
   });
 }, 1200000);
 
