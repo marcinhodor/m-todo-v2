@@ -131,12 +131,6 @@ app.delete('/categories/:id', (req, res) => {
   })
 })
 
-setInterval(function () {
-  http.get("http://m-todo-v2.herokuapp.com", (res) => {
-    // console.log('ping')
-  });
-}, 1200000);
-
 app.listen(port, () => {
   console.log(`server up on port: ${port}`)
 });
